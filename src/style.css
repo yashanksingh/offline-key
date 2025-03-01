@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+    --color-darkblue: #020817;
+    --color-cus-purple: #a855f7
+}
+
+body {
+    background-color: var(--color-darkblue);
+    user-select: none;
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a custom width */
+    height: 20px; /* Set a custom height */
+    background: white; /* Set a custom background color */
+    border: 2px solid var(--color-cus-purple); /* Add a border */
+    border-radius: 50%; /* Make it round */
+    cursor: pointer; /* Change cursor on hover */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add a shadow */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid var(--color-cus-purple);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid var(--color-cus-purple);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
