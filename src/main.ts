@@ -5,7 +5,7 @@ import { generatePassword } from "./password.ts";
 const app = document.querySelector<HTMLDivElement>('#app')!
 
 app.innerHTML = `
-  <nav class="fixed z-50 flex items-center justify-between w-full h-24 px-8 py-10">
+  <nav class="fixed z-50 flex items-center justify-center w-full h-24 px-8 py-10 md:justify-between">
     <div class="flex items-center">
       <img class="size-10" src="/logo.svg" alt="Logo">
       <p class="text-2xl font-bold text-white mx-2">Offline Key</p>
@@ -13,11 +13,11 @@ app.innerHTML = `
   </nav>
 
   <div class="flex flex-col min-h-screen items-center justify-center w-full mx-auto p-6 bg-card rounded-lg shadow-lg">
-    <h1 class="text-5xl font-bold text-center text-white mb-24">Generate strong, unique passwords</h1>
+    <h1 class="text-3xl font-bold text-center text-white mb-8 md:mb-16 lg:text-5xl lg:mb-24">Generate strong, unique passwords</h1>
 
     <div class="w-screen p-4 bg-muted rounded-md flex items-center justify-center gap-3 mb-10">
       <span class="flex overflow-hidden rounded-md border shadow-xs dark:border-gray-800 dark:bg-gray-900">
-        <span id="password" class="px-4 text-xl text-white inline-flex items-center font-mono min-w-70 justify-center">boogie</span>
+        <span id="password" class="mx-2 text-xl text-white inline-flex items-center font-mono w-50 overflow-hidden justify-center sm:w-60 lg:min-w-70 lg:w-auto lg:overflow-visible">boogie</span>
         <button id="copy" class="inline-block p-3 focus:relative dark:hover:bg-gray-800" title="Copy Password">
           <img src="/copy.svg" class="size-5" alt="Copy Password">
         </button>
@@ -31,7 +31,7 @@ app.innerHTML = `
       </div>
     </div>
 
-    <div class="mb-6 w-100">
+    <div class="mb-6 w-80 sm:w-90 md:w-100">
       <p id="num-chars" class="text-m text-gray-400">16 Characters</p>
       <div class="relative flex items-center mt-3">
         <div class="absolute h-1 w-full rounded-full bg-white/10"></div>
@@ -42,7 +42,7 @@ app.innerHTML = `
     </div>
 
 
-    <div class="grid grid-cols-2 gap-x-20 gap-y-4 mt-6">
+    <div class="grid grid-cols-2 gap-x-10 gap-y-4 mt-6 sm:gap-x-20">
       <div class="inline-flex items-center">
         <label class="flex items-center cursor-pointer relative">
           <input id="lowercase" type="checkbox" checked class="peer size-6 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-cus-purple checked:border-purple-300"/>
